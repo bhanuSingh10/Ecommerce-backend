@@ -30,7 +30,7 @@ async function init(){
             name:"temp",
             userId:"admin",
             email:"xyz@test.com",
-            userTypes:"ADMIN",
+            userType:"ADMIN",
             password:bcrypt.hashSync("welcome1",8)
         })
         console.log("admin created ",user);
@@ -40,6 +40,7 @@ async function init(){
 }
 
 require("./routes/authRoute")(app)
+require("./routes/categoryRoute")(app)
 
 app.listen(server_config.PORT,()=>{
     console.log(`server connected at localhost:${server_config.PORT}`);

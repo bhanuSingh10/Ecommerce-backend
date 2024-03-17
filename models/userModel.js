@@ -21,7 +21,7 @@ const userSchema= new mongoose.Schema({
         minLength:10,
         unique:true
        },
-       userTypes:{
+       userType:{
         type:String,
         default:"CUSTOMER",
         enum:["CUSTOMER","ADMIN"]
